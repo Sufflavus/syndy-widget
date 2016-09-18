@@ -3,6 +3,9 @@
 (function() {
     var nutrientsClassName = "syndy-nutrients";
     var requiredAttributeName = "product-id";
+    var contentUri = "widget.html";
+    var widgetWidth = "500px";
+    var widgetHeight = "700px";
 
     var nutrients = document.getElementsByClassName(nutrientsClassName);
 
@@ -12,12 +15,15 @@
             continue;
         }
 
-        var widgetFrame = document.createElement("iframe");
+        var widgetFrame = createIframe();
         element.appendChild(widgetFrame);
-        loadWidget(widgetFrame);
     }
 
-    function loadWidget(widgetFrame) {
-        
+    function createIframe() {
+        var widgetFrame = document.createElement("iframe");
+        widgetFrame.setAttribute("src", contentUri);
+        widgetFrame.style.width = widgetWidth;
+        widgetFrame.style.height = widgetHeight;
+        return widgetFrame;
     }
 })();
