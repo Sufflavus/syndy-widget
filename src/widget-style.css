@@ -55,3 +55,30 @@ td:last-child {
     text-align: center;
     font-weight: bold;
 }
+
+.nutrient-wrapper {    
+    width: 74px; 
+    height: 104px; 
+    color: #94D25D;
+    border: 1px #8ACC4E solid;    
+    border-top-left-radius: 40px 15px;  
+    border-top-right-radius: 40px 15px; 
+    border-bottom-right-radius: 40px 15px; 
+    border-bottom-left-radius: 40px 15px;
+    text-align: center;
+}
+
+.nutrient-content {
+    height: 98px;
+    background: #ECFFDB; 
+    border: 3px #FFFFFF solid; 
+    border-top-left-radius: 40px 15px;  
+    border-top-right-radius: 40px 15px; 
+    border-bottom-right-radius: 40px 15px; 
+    border-bottom-left-radius: 40px 15px;
+}
+
+.title {
+    margin: 15px auto;
+    font-weight: bold;
+}
