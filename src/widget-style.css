@@ -4,12 +4,12 @@
 }
 
 .content {
-    width: 480px;
-    height: 660px;
-    padding: 10px 0;
+    width: 540px;
+    height: 770px;
     border: 1px solid #EDE8E7;
     border-collapse: collapse;
     border-radius: 5px;
+    color: #191919;
 }
 
 table {
@@ -29,8 +29,15 @@ td {
 th, 
 td {
     text-align: right;
-    padding: 10px 20px;
     border-bottom: #EDE8E7 1px solid;
+}
+
+th {
+    padding: 25px 20px 10px 20px;
+}
+
+td {
+    padding: 17px 20px;
 }
 
 th,
@@ -51,34 +58,76 @@ td:last-child {
 }
 
 .summary {
-    margin: 20px;
+    margin: 20px 0 15px 0;
     text-align: center;
     font-weight: bold;
 }
 
-.nutrient-wrapper {    
+.nutrients {
+    margin: 20px;
+    text-align: center;
+    font-size: 0;
+}
+
+.nutrient-wrapper {  
+    display: inline-block;  
     width: 74px; 
-    height: 104px; 
-    color: #94D25D;
+    height: 104px;
+    margin: -1px 0 0 -1px;    
     border: 1px #8ACC4E solid;    
-    border-top-left-radius: 40px 15px;  
-    border-top-right-radius: 40px 15px; 
-    border-bottom-right-radius: 40px 15px; 
-    border-bottom-left-radius: 40px 15px;
+    border-top-left-radius: 50px 25px;  
+    border-top-right-radius: 50px 25px; 
+    border-bottom-right-radius: 50px 25px; 
+    border-bottom-left-radius: 50px 25px;
+    color: #94D25D;
     text-align: center;
 }
 
 .nutrient-content {
     height: 98px;
-    background: #ECFFDB; 
+    font-size: 13px;     
     border: 3px #FFFFFF solid; 
-    border-top-left-radius: 40px 15px;  
-    border-top-right-radius: 40px 15px; 
-    border-bottom-right-radius: 40px 15px; 
-    border-bottom-left-radius: 40px 15px;
+    border-top-left-radius: 50px 25px;  
+    border-top-right-radius: 50px 25px; 
+    border-bottom-right-radius: 50px 25px; 
+    border-bottom-left-radius: 50px 25px;
+    background: #ECFFDB;
 }
 
 .title {
-    margin: 15px auto;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.ammount {
+    height: 30px;    
+}
+
+.percent {
+    display: inline-block;
+    margin-top: 6px;
+    width: 40px;
+    height: 20px;
+    padding-top: 7px;    
+    border-radius: 20px 20px 5px 5px;  
+    background-color: #FFFFFF;
+    color: #191919;
+    text-align: center;
+}
+
+.footnote {
+    margin: 20px;
+    padding: 20px 10px 0 10px;
+    border-top: #191919 1px solid;
+    color: #A4A4A4;
+}
+
+.copyright {
+    margin: 20px;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.brand {
     font-weight: bold;
 }
