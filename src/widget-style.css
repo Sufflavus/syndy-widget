@@ -4,8 +4,7 @@
 }
 
 .content {
-    width: 540px;
-    height: 770px;
+    width: 630px;
     border: 1px solid #EDE8E7;
     border-collapse: collapse;
     border-radius: 5px;
@@ -53,8 +52,7 @@ td:first-child {
 td:last-child {
     color: #EDE8E7;
     padding-left: 0;
-    padding-right: 50px;    
-    max-width: 20px;
+    text-align: left;
 }
 
 .summary {
@@ -75,10 +73,6 @@ td:last-child {
     height: 104px;
     margin: -1px 0 0 -1px;    
     border: 1px #8ACC4E solid;    
-    border-top-left-radius: 50px 25px;  
-    border-top-right-radius: 50px 25px; 
-    border-bottom-right-radius: 50px 25px; 
-    border-bottom-left-radius: 50px 25px;
     color: #94D25D;
     text-align: center;
 }
@@ -87,11 +81,12 @@ td:last-child {
     height: 98px;
     font-size: 13px;     
     border: 3px #FFFFFF solid; 
-    border-top-left-radius: 50px 25px;  
-    border-top-right-radius: 50px 25px; 
-    border-bottom-right-radius: 50px 25px; 
-    border-bottom-left-radius: 50px 25px;
     background: #ECFFDB;
+}
+
+.nutrient-wrapper,
+.nutrient-content {
+    border-radius: 50px/25px;
 }
 
 .title {

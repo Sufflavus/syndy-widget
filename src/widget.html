@@ -1,132 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="widgetApp">
 <head>
     <meta charset="utf-8">
     <title>Syndy widget content</title>
     <link href="widget-style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="content">
+    <div class="content" ng-controller="WidgetController as widgetController">
         <table>
-            <tr>
-                <th></th>
-                <th>per 100 g</th> 
-                <th>per portie (%*)</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Enegie</td>
-                <td>1831 kJ</td> 
-                <td>594 kJ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Vetten</td>
-                <td>15 g</td> 
-                <td>4,5 g</td>
-                <td>(7%)</td>
-            </tr>
-            <tr>
-                <td>Enegie</td>
-                <td>1831 kJ</td> 
-                <td>594 kJ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Vetten</td>
-                <td>15 g</td> 
-                <td>4,5 g</td>
-                <td>(7%)</td>
-            </tr>
-            <tr>
-                <td>Enegie</td>
-                <td>1831 kJ</td> 
-                <td>594 kJ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Vetten</td>
-                <td>15 g</td> 
-                <td>4,5 g</td>
-                <td>(7%)</td>
-            </tr>
-            <tr>
-                <td>Vetten</td>
-                <td>15 g</td> 
-                <td>4,5 g</td>
-                <td>(7%)</td>
-            </tr>
-            <tr>
-                <td>Enegie</td>
-                <td>1831 kJ</td> 
-                <td>594 kJ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Vetten</td>
-                <td>15 g</td> 
-                <td>4,5 g</td>
-                <td>(7%)</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>per 100 g</th> 
+                    <th>per portie (%*)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="nutrition in widgetController.nutritions track by $index">
+                    <td>{{ ::nutrition.name }}</td>
+                    <td>{{ ::nutrition.share.perHundredGram }}</td> 
+                    <td>{{ ::nutrition.share.perPortion }}</td>
+                    <td>{{ ::nutrition.share.perThertyGramLabel }}</td>
+                </tr>
+            </tbody>
         </table>
 
         <div class="summary">per portie (30 g)</div>
         
-        <div class="nutrients">            
-            <div class="nutrient-wrapper">
+        <div class="nutrients">
+            <div class="nutrient-wrapper" 
+                ng-repeat="nutrition in widgetController.nutritionsSummary track by $index">
                 <div class="nutrient-content">
-                    <div class="title">Energie</div>
+                    <div class="title">{{ ::nutrition.name }}</div>
                     <div class="ammount">
-                        <div>549 kJ</div>
-                        <div>131 kcal</div>
-                    </div>                    
-                    <div class="percent">7%*</div>
+                        <div ng-repeat="share in nutrition.share.perPortion track by $index">{{ ::share }}</div>
+                    </div>
+                    <div class="percent">{{ ::nutrition.share.perThertyGram }}</div>
                 </div>
-            </div>
-            <div class="nutrient-wrapper">
-                <div class="nutrient-content">
-                    <div class="title">Vetten</div>
-                    <div class="ammount">
-                        <div>4,5 g</div>            
-                    </div>                   
-                    <div class="percent">6%*</div>
-                </div>           
-            </div>
-            <div class="nutrient-wrapper">
-                <div class="nutrient-content">
-                    <div class="title">Vetten</div>
-                    <div class="ammount">
-                        <div>4,5 g</div>
-                        <div>131 kcal</div>
-                    </div>
-                    <div class="percent">6%*</div>
-                </div>           
-            </div>
-            <div class="nutrient-wrapper">
-                <div class="nutrient-content">
-                    <div class="title">Vetten</div>
-                    <div class="ammount">
-                        <div>4,5 g</div>
-                        <div>131 kcal</div>
-                    </div>
-                    <div class="percent">6%*</div>
-                </div>           
-            </div>
-            <div class="nutrient-wrapper">
-                <div class="nutrient-content">
-                    <div class="title">Vetten</div>
-                    <div class="ammount">
-                        <div>4,5 g</div>
-                        <div>131 kcal</div>
-                    </div>
-                    <div class="percent">6%*</div>
-                </div>           
             </div>
         </div>
 
-        <div class="footnote">* percentage op basis...</div>
+        <div class="footnote">* percentage op basis van Referentie inname van een gemiddeide volwassene 8400 Kj/2000 kCal</div>
 
         <div class="copyright">Powered by <span class="brand">syndy</span></div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/data.service.js"></script>
+    <script src="app/nutrition.factory.js"></script>
+    <script src="app/widget.controller.js"></script>
 </body>
 </html>
