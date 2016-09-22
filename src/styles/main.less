@@ -1,0 +1,45 @@
+@import "variables.less";
+
+@footnote-border-color: @main-font-color;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.content {
+    width: 630px;
+    border: 1px solid @table-border-color;
+    border-collapse: collapse;
+    border-radius: 5px;
+    color: @main-font-color;
+}
+
+.summary {
+    margin: 20px 0 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nutrients {
+    margin: 20px;
+    text-align: center;
+    font-size: 0;
+}
+
+.footnote {
+    margin: 20px;
+    padding: 20px 10px 0 10px;
+    border-top: @footnote-border-color 1px solid;
+    color: @footnote-font-color;
+}
+
+.copyright {
+    margin: 20px;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.brand {
+    font-weight: bold;
+}

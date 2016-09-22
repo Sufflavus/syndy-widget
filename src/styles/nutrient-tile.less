@@ -1,0 +1,44 @@
+@import "variables.less";
+
+.nutrient-wrapper {  
+    display: inline-block;  
+    width: 74px; 
+    height: 104px;
+    margin: -1px 0 0 -1px;    
+    border: 1px @nutrient-outer-border-color solid;    
+    color: @nutrient-font-color;
+    text-align: center;
+}
+
+.nutrient-content {
+    height: 98px;
+    font-size: 13px;     
+    border: 3px @nutrient-inner-border-color solid; 
+    background: @nutrient-background-color;
+}
+
+.nutrient-wrapper,
+.nutrient-content {
+    border-radius: 50px ~"/" 25px;
+}
+
+.title {
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.ammount {
+    height: 30px;    
+}
+
+.percent {
+    display: inline-block;
+    margin-top: 6px;
+    width: 40px;
+    height: 20px;
+    padding-top: 7px;    
+    border-radius: 20px 20px 5px 5px;  
+    background-color: @nutrient-inner-border-color;
+    color: @main-font-color;
+    text-align: center;
+}
