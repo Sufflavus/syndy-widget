@@ -2,6 +2,51 @@
 
 @nutrient-table-percent-color: @table-border-color;
 
+.nutrient-tbl {
+    width: 100%;
+}
+
+.nutrient-tbl,
+.nutrient-tbl__tr,
+.nutrient-tbl__th,
+.nutrient-tbl__td, {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-collapse: collapse;
+}
+
+.nutrient-tbl__th,
+.nutrient-tbl__td, {
+    border-bottom: @table-border-color 1px solid;
+    text-align: right;
+}
+
+.nutrient-tbl__th {
+    padding: 25px 20px 10px 20px;
+    font-weight: bold;
+}
+
+.nutrient-tbl__td {
+    padding: 17px 20px;
+
+    &:first-child {
+        padding-left: 50px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &:last-child {
+        padding-left: 0;
+        text-align: left;
+        color: @nutrient-table-percent-color;
+    }
+}
+
+
+
+
+
 table {
     width: 100%;
 }
