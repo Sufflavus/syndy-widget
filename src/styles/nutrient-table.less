@@ -9,7 +9,9 @@
 .nutrient-tbl,
 .nutrient-tbl__tr,
 .nutrient-tbl__th,
-.nutrient-tbl__td, {
+.nutrient-tbl__td,
+.nutrient-tbl__td_first,
+.nutrient-tbl__td_last {
     margin: 0;
     padding: 0;
     border: none;
@@ -29,64 +31,18 @@
 
 .nutrient-tbl__td {
     padding: 17px 20px;
-
-    &:first-child {
-        padding-left: 50px;
-        text-align: left;
-        font-weight: bold;
-    }
-
-    &:last-child {
-        padding-left: 0;
-        text-align: left;
-        color: @nutrient-table-percent-color;
-    }
 }
 
-
-
-
-
-table {
-    width: 100%;
-}
-
-table, 
-tr,
-th,
-td {
-    border: none;
-    border-collapse: collapse;
-    padding: 0;
-    margin: 0;
-}
-
-th, 
-td {
-    text-align: right;
+.nutrient-tbl__td_first {
+    padding: 17px 20px 17px 50px;
+    text-align: left;
+    font-weight: bold;
     border-bottom: @table-border-color 1px solid;
 }
 
-th {
-    padding: 25px 20px 10px 20px;
-}
-
-td {
-    padding: 17px 20px;
-}
-
-th,
-td:first-child {
-    font-weight: bold;
-}
-
-td:first-child {
+.nutrient-tbl__td_last {
+    padding: 17px 20px 17px 0;
     text-align: left;
-    padding-left: 50px;
-}
-
-td:last-child {
     color: @nutrient-table-percent-color;
-    padding-left: 0;
-    text-align: left;
+    border-bottom: @table-border-color 1px solid;
 }

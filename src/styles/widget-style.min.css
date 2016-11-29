@@ -33,41 +33,43 @@
 .brand {
   font-weight: bold;
 }
-table {
+.nutrient-tbl {
   width: 100%;
 }
-table,
-tr,
-th,
-td {
+.nutrient-tbl,
+.nutrient-tbl__tr,
+.nutrient-tbl__th,
+.nutrient-tbl__td,
+.nutrient-tbl__td_first,
+.nutrient-tbl__td_last {
+  margin: 0;
+  padding: 0;
   border: none;
   border-collapse: collapse;
-  padding: 0;
-  margin: 0;
 }
-th,
-td {
-  text-align: right;
+.nutrient-tbl__th,
+.nutrient-tbl__td {
   border-bottom: #EDE8E7 1px solid;
+  text-align: right;
 }
-th {
+.nutrient-tbl__th {
   padding: 25px 20px 10px 20px;
-}
-td {
-  padding: 17px 20px;
-}
-th,
-td:first-child {
   font-weight: bold;
 }
-td:first-child {
-  text-align: left;
-  padding-left: 50px;
+.nutrient-tbl__td {
+  padding: 17px 20px;
 }
-td:last-child {
-  color: #EDE8E7;
-  padding-left: 0;
+.nutrient-tbl__td_first {
+  padding: 17px 20px 17px 50px;
   text-align: left;
+  font-weight: bold;
+  border-bottom: #EDE8E7 1px solid;
+}
+.nutrient-tbl__td_last {
+  padding: 17px 20px 17px 0;
+  text-align: left;
+  color: #EDE8E7;
+  border-bottom: #EDE8E7 1px solid;
 }
 .nutrient-wrapper {
   display: inline-block;

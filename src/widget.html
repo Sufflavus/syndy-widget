@@ -7,21 +7,21 @@
 </head>
 <body>
     <div class="content" ng-controller="WidgetController as widgetController">
-        <table>
+        <table class="nutrient-tbl">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>per 100 g</th> 
-                    <th>per portie (%*)</th>
-                    <th></th>
+                    <th class="nutrient-tbl__th"></th>
+                    <th class="nutrient-tbl__th">per 100 g</th> 
+                    <th class="nutrient-tbl__th">per portie (%*)</th>
+                    <th class="nutrient-tbl__th"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="nutrition in widgetController.nutritions track by $index">
-                    <td>{{ ::nutrition.name }}</td>
-                    <td>{{ ::nutrition.share.perHundredGram }}</td> 
-                    <td>{{ ::nutrition.share.perPortion }}</td>
-                    <td>{{ ::nutrition.share.perThertyGramLabel }}</td>
+                    <td class="nutrient-tbl__td_first">{{ ::nutrition.name }}</td>
+                    <td class="nutrient-tbl__td">{{ ::nutrition.share.perHundredGram }}</td> 
+                    <td class="nutrient-tbl__td">{{ ::nutrition.share.perPortion }}</td>
+                    <td class="nutrient-tbl__td_last">{{ ::nutrition.share.perThertyGramLabel }}</td>
                 </tr>
             </tbody>
         </table>
