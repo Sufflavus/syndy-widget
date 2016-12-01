@@ -1,37 +1,34 @@
 @import "variables.less";
 
-.nutrient-wrapper {  
+.nutrient-tile {
     display: inline-block;  
     width: 74px; 
     height: 104px;
     margin: -1px 0 0 -1px;    
     border: 1px @nutrient-outer-border-color solid;    
+    border-radius: 50px ~"/" 25px;
     color: @nutrient-font-color;
-    text-align: center;
+    text-align: center;    
 }
 
-.nutrient-content {
+.nutrient-tile__content {
     height: 98px;
     font-size: 13px;     
     border: 3px @nutrient-inner-border-color solid; 
+    border-radius: 50px ~"/" 25px;
     background: @nutrient-background-color;
 }
 
-.nutrient-wrapper,
-.nutrient-content {
-    border-radius: 50px ~"/" 25px;
-}
-
-.title {
+.nutrient-tile__content__title {
     margin: 10px auto;
     font-weight: bold;
 }
 
-.ammount {
+.nutrient-tile__content__ammount {
     height: 30px;    
 }
 
-.percent {
+.nutrient-tile__content__percent {
     display: inline-block;
     margin-top: 6px;
     width: 40px;

@@ -29,14 +29,14 @@
         <div class="summary">per portie (30 g)</div>
         
         <div class="nutrients">
-            <div class="nutrient-wrapper" 
+            <div class="nutrient-tile" 
                 ng-repeat="nutrition in widgetController.nutritionsSummary track by $index">
-                <div class="nutrient-content">
-                    <div class="title">{{ ::nutrition.name }}</div>
-                    <div class="ammount">
+                <div class="nutrient-tile__content">
+                    <div class="nutrient-tile__content__title">{{ ::nutrition.name }}</div>
+                    <div class="nutrient-tile__content__ammount">
                         <div ng-repeat="share in nutrition.share.perPortion track by $index">{{ ::share }}</div>
                     </div>
-                    <div class="percent">{{ ::nutrition.share.perThertyGram }}</div>
+                    <div class="nutrient-tile__content__percent">{{ ::nutrition.share.perThertyGram }}</div>
                 </div>
             </div>
         </div>
